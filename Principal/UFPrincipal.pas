@@ -54,13 +54,13 @@ var
 implementation
 
 uses
-  UDmImagens, UFunc, UFConsultaUnidade;
+  UDmImagens, UFunc, UFConsultaUnidade, UFConsultaFornecedor;
 
 {$R *.dfm}
 
 procedure TFPrincipal.actClientesExecute(Sender: TObject);
 begin
-  TFunc.CriaForm(TFConsultaUnidade);
+  //
 end;
 
 procedure TFPrincipal.actControledeMesaExecute(Sender: TObject);
@@ -70,7 +70,7 @@ end;
 
 procedure TFPrincipal.actFornecedoresExecute(Sender: TObject);
 begin
-  //
+  TFunc.CriaForm(TFConsultaFornecedor);
 end;
 
 procedure TFPrincipal.ActProdutosExecute(Sender: TObject);
@@ -95,7 +95,7 @@ end;
 
 procedure TFPrincipal.actUnidadeExecute(Sender: TObject);
 begin
-  //
+  TFunc.CriaForm(TFConsultaUnidade);
 end;
 
 procedure TFPrincipal.actVendasExecute(Sender: TObject);

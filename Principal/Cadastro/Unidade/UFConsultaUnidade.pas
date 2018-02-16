@@ -11,17 +11,16 @@ uses
 type
   TFConsultaUnidade = class(TFConsulta)
     groupPesquisa: TGroupBox;
-    lblPesquisar: TLabel;
-    lblTipoPesquisa: TLabel;
-    btnPesquisar: TButton;
-    edtPesquisa: TEdit;
-    Cmb_TipoPesquisa: TComboBox;
     DTSUN_ID: TIntegerField;
     DTSUN_CODIGO: TStringField;
     DTSUN_DESCRICAO: TStringField;
     CDSUN_ID: TIntegerField;
     CDSUN_CODIGO: TStringField;
     CDSUN_DESCRICAO: TStringField;
+    lblPesquisar: TLabel;
+    lblTipoPesquisa: TLabel;
+    edtPesquisa: TEdit;
+    Cmb_TipoPesquisa: TComboBox;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnPesquisarClick(Sender: TObject);

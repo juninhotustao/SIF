@@ -36,6 +36,20 @@ begin
   if not(DS.State in [dsEdit, dsInsert]) then
     Exit;
 
+  if trim(dbCodigo.Text) = '' then
+  begin
+    MessageBox(Handle, 'O campo código não pode ficar vazio!', 'ATENÇÃO!', MB_OK+MB_ICONQUESTION);
+    dbCodigo.SetFocus;
+    exit;
+  end;
+
+  if trim(dbDescricao.Text) = '' then
+  begin
+    MessageBox(Handle, 'O campo descrição não pode ficar vazio!', 'ATENÇÃO!', MB_OK+MB_ICONQUESTION);
+    dbDescricao.SetFocus;
+    exit;
+  end;
+
   case DS.State of
     dsEdit: msg := 'Confirma a alteração deste Registro?';
     dsInsert: msg := 'Confirma essa novo Registro?';

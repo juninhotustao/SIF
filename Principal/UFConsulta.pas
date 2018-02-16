@@ -25,6 +25,8 @@ type
     DTS: TSQLDataSet;
     DSP: TDataSetProvider;
     CDS: TClientDataSet;
+    btnPesquisar: TButton;
+    gpPesquisar2: TGroupBox;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure btnSairClick(Sender: TObject);
@@ -47,6 +49,7 @@ type
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure GridKeyPress(Sender: TObject; var Key: Char);
     procedure GridTitleClick(Column: TColumn);
+    procedure GridDblClick(Sender: TObject);
   protected
     TabelaNome: string;
     FrmClass: TCadBase;
@@ -287,6 +290,11 @@ const
     'WHERE isnumeric(%0:s) = 1 and charindex(''.'', %0:s) = 0 and charindex('','', %0:s) = 0';
 begin
   Result := dmCon.OpenSQL(Format(SQL, [AField, ATable]), []) + 1;
+end;
+
+procedure TFConsulta.GridDblClick(Sender: TObject);
+begin
+  btnAlterarClick(Sender);
 end;
 
 procedure TFConsulta.GridDrawColumnCell(Sender: TObject; const Rect: TRect;

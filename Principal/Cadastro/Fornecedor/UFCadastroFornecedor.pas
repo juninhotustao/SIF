@@ -45,6 +45,7 @@ type
     procedure rg_tipoClick(Sender: TObject);
     procedure edt_cpfExit(Sender: TObject);
     procedure edt_cgcExit(Sender: TObject);
+    procedure btnConfirmaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,7 +59,30 @@ implementation
 
 {$R *.dfm}
 
-uses UDmModelFornecedor, UFunc, UCtrlFornecedor;
+uses UFunc, UFConsultaFornecedor;
+
+procedure TFCadastroFornecedor.btnConfirmaClick(Sender: TObject);
+var
+  msg: String;
+begin
+  if not(DS.State in [dsEdit, dsInsert]) then
+    Exit;
+
+  case DS.State of
+    dsEdit: msg := 'Confirma a alteração deste Registro?';
+    dsInsert: msg := 'Confirma essa novo Registro?';
+  end;
+
+  if MessageDlg(pchar(msg), mtInformation, mbYesNo, 0,mbYes) = IDYES then
+  try
+    DS.Dataset.Post;
+  except
+    on E: Exception do
+      raise Exception.Create(E.Message);
+  end;
+
+  Close;
+end;
 
 procedure TFCadastroFornecedor.edt_cgcExit(Sender: TObject);
 begin

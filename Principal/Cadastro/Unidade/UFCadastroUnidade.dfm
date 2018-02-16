@@ -4,8 +4,13 @@ inherited FCadastroUnidade: TFCadastroUnidade
   ExplicitHeight = 209
   PixelsPerInch = 96
   TextHeight = 13
+  inherited pnlRodape: TPanel
+    Top = 148
+    ExplicitTop = 148
+  end
   inherited pnlPrincipal: TPanel
     Height = 148
+    ExplicitTop = 0
     ExplicitHeight = 148
     object lblCodigo: TLabel
       Left = 23

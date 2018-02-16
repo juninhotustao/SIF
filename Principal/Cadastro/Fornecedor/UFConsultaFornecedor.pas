@@ -5,20 +5,46 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UFConsulta, Data.DB, Vcl.StdCtrls,
-  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls;
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Data.FMTBcd, Datasnap.DBClient,
+  Datasnap.Provider, Data.SqlExpr;
 
 type
   TFConsultaFornecedor = class(TFConsulta)
-    gpPesquisar: TGroupBox;
     lblTipoPesquisa: TLabel;
+    Cmb_TipoPesquisa: TComboBox;
     lbl_TextoPesquisa: TLabel;
     Edt_Conteudo: TEdit;
-    Cmb_TipoPesquisa: TComboBox;
-    btnPesquisar: TButton;
+    DTSFOR_ID: TIntegerField;
+    DTSFOR_TIPO_PES: TStringField;
+    DTSFOR_CPF: TStringField;
+    DTSFOR_CNPJ: TStringField;
+    DTSFOR_INSCRICAO: TStringField;
+    DTSFOR_NOME: TStringField;
+    DTSFOR_TELEFONE: TStringField;
+    DTSFOR_TELEFONE2: TStringField;
+    DTSFOR_ENDERECO: TStringField;
+    DTSFOR_END_NUMERO: TStringField;
+    DTSFOR_END_COMPLEMENTO: TStringField;
+    DTSFOR_BAIRRO: TStringField;
+    DTSFOR_ESTADO: TStringField;
+    DTSFOR_CIDADE: TStringField;
+    DTSFOR_CEP: TStringField;
+    CDSFOR_ID: TIntegerField;
+    CDSFOR_TIPO_PES: TStringField;
+    CDSFOR_CPF: TStringField;
+    CDSFOR_CNPJ: TStringField;
+    CDSFOR_INSCRICAO: TStringField;
+    CDSFOR_NOME: TStringField;
+    CDSFOR_TELEFONE: TStringField;
+    CDSFOR_TELEFONE2: TStringField;
+    CDSFOR_ENDERECO: TStringField;
+    CDSFOR_END_NUMERO: TStringField;
+    CDSFOR_END_COMPLEMENTO: TStringField;
+    CDSFOR_BAIRRO: TStringField;
+    CDSFOR_ESTADO: TStringField;
+    CDSFOR_CIDADE: TStringField;
+    CDSFOR_CEP: TStringField;
     procedure btnPesquisarClick(Sender: TObject);
-    procedure BtnNovoClick(Sender: TObject);
-    procedure btnAlterarClick(Sender: TObject);
-    procedure btnExcluirClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
@@ -33,57 +59,40 @@ implementation
 
 {$R *.dfm}
 
-uses UDmModelFornecedor, UCtrlFornecedor, UFCadastroFornecedor;
-
-procedure TFConsultaFornecedor.btnAlterarClick(Sender: TObject);
-begin
-  if FController.IsEmpty then
-  begin
-    MessageBox(Handle, 'Pesquise um Fornecedor antes de alterar !', 'ATENÇÃO', MB_OK);
-    exit;
-  end;
-
-  CreateForm(TFCadastroFornecedor);
-  FController.Open;
-  FController.Edit;
-end;
-
-procedure TFConsultaFornecedor.btnExcluirClick(Sender: TObject);
-begin
-  if FController.IsEmpty then
-  begin
-    MessageBox(Handle, 'Pesquise um Fornecedor antes de excluir !', 'ATENÇÃO', MB_OK);
-    exit;
-  end;
-
-  if MessageDlg('Deseja realmente excluir este registro?', mtInformation, mbYesNo, 0,mbNo) = IDYES then
-    FController.Delete;
-end;
-
-procedure TFConsultaFornecedor.BtnNovoClick(Sender: TObject);
-begin
-  FController.Open;
-  FController.Insert;
-  CreateForm(TFCadastroFornecedor);
-  Grid.SetFocus;
-end;
+uses  UFCadastroFornecedor;
 
 procedure TFConsultaFornecedor.btnPesquisarClick(Sender: TObject);
+const
+  SQL_CONSULTA =
+    ' SELECT '+
+    '   * '+
+    ' FROM '+
+    '   FORNECEDORES '+
+    ' WHERE '+
+    ' %s';
+var
+  Ssql: string;
 begin
-  with FController as TCtrlFornecedor do
-    if not LocalizaFornecedor([Cmb_TipoPesquisa.ItemIndex, Edt_Conteudo.Text]) then
-    begin
-      MessageDlg('Não foi encontrado Fornecedor na pesquisa.', mtWarning, [mbOK], 0);
-      Abort;
-    end
-    else
-      Grid.SetFocus;
+  case Cmb_TipoPesquisa.ItemIndex of
+    0: Ssql := Format(SQL_CONSULTA, ['FOR_NOME LIKE :FOR_NOME']);
+    1: Ssql := Format(SQL_CONSULTA, ['CONVERT(VARCHAR(10), FOR_ID) LIKE :FOR_ID']);
+    2: Ssql := Format(SQL_CONSULTA, ['FOR_CIDADE LIKE :FOR_CIDADE']);
+  end;
+
+  CDS.Close;
+  CDS.CommandText := Ssql;
+  CDS.Params[0].Value := Edt_Conteudo.Text+'%';
+  CDS.Open;
+
+  if CDS.IsEmpty then
+    MessageBox(Handle, 'Não foi encontrado registro na Pesquisa!', 'ATENÇÃO!', MB_OK+MB_ICONQUESTION);
 end;
 
 procedure TFConsultaFornecedor.FormCreate(Sender: TObject);
 begin
-  FController := TCtrlFornecedor.Create;
-  FController.Open;
+  inherited;
+
+  FrmClass := TFCadastroFornecedor;
 end;
 
 end.

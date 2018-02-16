@@ -42,6 +42,7 @@ object FConsulta: TFConsulta
       TitleFont.Name = 'Tahoma'
       TitleFont.Style = []
       OnDrawColumnCell = GridDrawColumnCell
+      OnDblClick = GridDblClick
       OnKeyPress = GridKeyPress
       OnTitleClick = GridTitleClick
     end
@@ -55,6 +56,25 @@ object FConsulta: TFConsulta
       Color = clActiveBorder
       ParentBackground = False
       TabOrder = 1
+      object btnPesquisar: TButton
+        Left = 439
+        Top = 22
+        Width = 100
+        Height = 48
+        Caption = '&Pesquisar'
+        HotImageIndex = 77
+        ImageIndex = 77
+        Images = DmImagens.Img
+        TabOrder = 0
+      end
+      object gpPesquisar2: TGroupBox
+        Left = 14
+        Top = 6
+        Width = 413
+        Height = 73
+        Caption = 'Pesquisar'
+        TabOrder = 1
+      end
     end
     object pnlRodape: TPanel
       Left = 0
@@ -77,6 +97,7 @@ object FConsulta: TFConsulta
         Caption = '&Novo'
         HotImageIndex = 48
         ImageIndex = 48
+        Images = DmImagens.Img
         TabOrder = 0
         OnClick = BtnNovoClick
       end
@@ -89,6 +110,7 @@ object FConsulta: TFConsulta
         Caption = '&Sair'
         HotImageIndex = 29
         ImageIndex = 29
+        Images = DmImagens.Img
         TabOrder = 1
         OnClick = btnSairClick
       end
@@ -101,6 +123,7 @@ object FConsulta: TFConsulta
         Caption = '&Alterar'
         HotImageIndex = 51
         ImageIndex = 51
+        Images = DmImagens.Img
         TabOrder = 2
         OnClick = btnAlterarClick
       end
@@ -113,6 +136,7 @@ object FConsulta: TFConsulta
         Caption = '&Excluir'
         HotImageIndex = 59
         ImageIndex = 59
+        Images = DmImagens.Img
         TabOrder = 3
         OnClick = btnExcluirClick
       end
@@ -135,7 +159,7 @@ object FConsulta: TFConsulta
   end
   object DSP: TDataSetProvider
     DataSet = DTS
-    Options = [poFetchDetailsOnDemand, poAutoRefresh, poPropogateChanges, poRetainServerOrder, poUseQuoteChar]
+    Options = [poFetchDetailsOnDemand, poAutoRefresh, poPropogateChanges, poAllowCommandText, poRetainServerOrder, poUseQuoteChar]
     UpdateMode = upWhereKeyOnly
     AfterUpdateRecord = DSPAfterUpdateRecord
     Left = 384

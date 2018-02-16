@@ -1,36 +1,26 @@
 inherited FCadastroFornecedor: TFCadastroFornecedor
   Caption = 'Cadastro de Fornecedores'
-  ClientHeight = 353
+  ClientHeight = 330
   ClientWidth = 530
   ExplicitWidth = 536
-  ExplicitHeight = 381
+  ExplicitHeight = 358
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlRodape: TPanel
-    Top = 299
+    Top = 297
     Width = 530
-    Height = 54
-    Align = alBottom
-    ExplicitTop = 299
+    ExplicitTop = 320
     ExplicitWidth = 530
-    ExplicitHeight = 54
     inherited btnConfirma: TButton
-      Left = 195
-      Top = 7
-      ExplicitLeft = 195
-      ExplicitTop = 7
+      ExplicitHeight = 52
     end
     inherited btnCancela: TButton
-      Left = 275
-      Top = 7
-      ExplicitLeft = 275
-      ExplicitTop = 7
+      ExplicitHeight = 52
     end
   end
   inherited pnlPrincipal: TPanel
-    Top = 0
     Width = 530
-    Height = 299
+    Height = 297
     ExplicitTop = 0
     ExplicitWidth = 530
     ExplicitHeight = 299
@@ -500,8 +490,9 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
     end
   end
   inherited DS: TDataSource
-    DataSet = DmModelFornecedor.CDS
-    Left = 496
-    Top = 240
+    AutoEdit = False
+    DataSet = FConsultaFornecedor.CDS
+    Left = 472
+    Top = 232
   end
 end

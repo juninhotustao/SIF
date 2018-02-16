@@ -10,19 +10,17 @@ uses
   UFunc in 'UFunc.pas',
   VarRecs in 'VarRecs.pas',
   UFConsultaUnidade in 'Cadastro\Unidade\UFConsultaUnidade.pas' {FConsultaUnidade},
-  UFCadastroUnidade in 'Cadastro\Unidade\UFCadastroUnidade.pas' {FCadastroUnidade};
+  UFCadastroUnidade in 'Cadastro\Unidade\UFCadastroUnidade.pas' {FCadastroUnidade},
+  UFCadastroFornecedor in 'Cadastro\Fornecedor\UFCadastroFornecedor.pas' {FCadastroFornecedor},
+  UFConsultaFornecedor in 'Cadastro\Fornecedor\UFConsultaFornecedor.pas' {FConsultaFornecedor};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TFPrincipal, FPrincipal);
   Application.CreateForm(TdmCon, dmCon);
+  Application.CreateForm(TFPrincipal, FPrincipal);
   Application.CreateForm(TDmImagens, DmImagens);
-  Application.CreateForm(TFCadastro, FCadastro);
-  Application.CreateForm(TFConsulta, FConsulta);
-  Application.CreateForm(TFConsultaUnidade, FConsultaUnidade);
-  Application.CreateForm(TFCadastroUnidade, FCadastroUnidade);
   Application.Run;
 end.
