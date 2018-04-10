@@ -25,25 +25,24 @@ object FCadastro: TFCadastro
     Width = 405
     Height = 33
     Align = alBottom
-    Color = clActiveBorder
+    BevelOuter = bvNone
+    Color = clScrollBar
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 0
     object btnConfirma: TButton
-      Left = 1
+      Left = 100
       Top = 1
-      Width = 76
+      Width = 101
       Height = 31
       Hint = 'Gravar Registro'
-      Align = alLeft
+      Caption = 'Confirmar'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Verdana'
       Font.Style = []
-      HotImageIndex = 38
-      ImageAlignment = iaCenter
-      ImageIndex = 38
+      HotImageIndex = 41
+      ImageIndex = 41
       Images = DmImagens.Img
       ParentFont = False
       ParentShowHint = False
@@ -52,15 +51,14 @@ object FCadastro: TFCadastro
       OnClick = btnConfirmaClick
     end
     object btnCancela: TButton
-      Left = 77
+      Left = 218
       Top = 1
-      Width = 76
+      Width = 101
       Height = 31
       Hint = 'Cancelar Altera'#231#245'es'
-      Align = alLeft
-      HotImageIndex = 33
-      ImageAlignment = iaCenter
-      ImageIndex = 33
+      Caption = 'Cancelar'
+      HotImageIndex = 32
+      ImageIndex = 32
       Images = DmImagens.Img
       ParentShowHint = False
       ShowHint = True
@@ -75,7 +73,6 @@ object FCadastro: TFCadastro
     Height = 273
     Align = alClient
     TabOrder = 0
-    ExplicitTop = 33
   end
   object DS: TDataSource
     Left = 328

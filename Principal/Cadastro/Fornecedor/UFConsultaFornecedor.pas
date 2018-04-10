@@ -65,7 +65,9 @@ procedure TFConsultaFornecedor.btnPesquisarClick(Sender: TObject);
 const
   SQL_CONSULTA =
     ' SELECT '+
-    '   * '+
+	  '   FOR_ID, FOR_TIPO_PES, FOR_CPF, FOR_CNPJ, FOR_INSCRICAO, FOR_NOME, '+
+    '   FOR_TELEFONE, FOR_TELEFONE2, FOR_ENDERECO, FOR_END_NUMERO, FOR_BAIRRO, '+
+    '   FOR_END_COMPLEMENTO, FOR_ESTADO, FOR_CIDADE, FOR_CEP '+
     ' FROM '+
     '   FORNECEDORES '+
     ' WHERE '+
@@ -73,13 +75,14 @@ const
 var
   Ssql: string;
 begin
+  CDS.Close;
+
   case Cmb_TipoPesquisa.ItemIndex of
     0: Ssql := Format(SQL_CONSULTA, ['FOR_NOME LIKE :FOR_NOME']);
     1: Ssql := Format(SQL_CONSULTA, ['CONVERT(VARCHAR(10), FOR_ID) LIKE :FOR_ID']);
-    2: Ssql := Format(SQL_CONSULTA, ['FOR_CIDADE LIKE :FOR_CIDADE']);
+    2: Ssql := Format(SQL_CONSULTA, ['ISNULL(FOR_CIDADE, '''') LIKE :FOR_CIDADE']);
   end;
 
-  CDS.Close;
   CDS.CommandText := Ssql;
   CDS.Params[0].Value := Edt_Conteudo.Text+'%';
   CDS.Open;

@@ -1,30 +1,25 @@
 inherited FConsultaUnidade: TFConsultaUnidade
   Caption = 'Consulta Unidades'
-  ClientHeight = 376
-  ClientWidth = 605
+  ClientHeight = 453
+  ClientWidth = 624
   OnCreate = FormCreate
-  ExplicitWidth = 611
-  ExplicitHeight = 404
+  ExplicitWidth = 630
+  ExplicitHeight = 481
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlGrid: TPanel
-    Width = 605
-    Height = 376
+    Width = 624
+    Height = 453
     ExplicitWidth = 605
-    ExplicitHeight = 376
+    ExplicitHeight = 453
     inherited Grid: TDBGrid
-      Width = 605
-      Height = 224
+      Top = 137
+      Width = 624
+      Height = 261
       Color = clBtnFace
       DataSource = DS
       ParentCtl3D = False
       Columns = <
-        item
-          Expanded = False
-          FieldName = 'UN_ID'
-          Title.Caption = 'ID'
-          Visible = False
-        end
         item
           Expanded = False
           FieldName = 'UN_CODIGO'
@@ -41,55 +36,51 @@ inherited FConsultaUnidade: TFConsultaUnidade
         end>
     end
     inherited pnlConsulta: TPanel
-      Width = 605
-      ExplicitWidth = 605
-      object groupPesquisa: TGroupBox [0]
-        Left = 0
-        Top = 0
-        Width = 605
-        Height = 97
-        Align = alClient
-        TabOrder = 0
-      end
+      Width = 624
+      Height = 137
+      ExplicitWidth = 726
+      ExplicitHeight = 137
       inherited btnPesquisar: TButton
-        Left = 492
-        TabOrder = 1
+        Left = 511
+        Top = 37
         OnClick = btnPesquisarClick
-        ExplicitLeft = 492
+        ExplicitLeft = 511
+        ExplicitTop = 37
       end
       inherited gpPesquisar2: TGroupBox
-        Left = 10
-        Top = 8
-        Width = 476
-        TabOrder = 2
-        ExplicitLeft = 10
-        ExplicitTop = 8
-        ExplicitWidth = 476
+        Left = 17
+        Top = 13
+        Width = 484
+        Height = 92
+        ExplicitLeft = 17
+        ExplicitTop = 13
+        ExplicitWidth = 484
+        ExplicitHeight = 92
         object lblPesquisar: TLabel
-          Left = 156
-          Top = 40
+          Left = 157
+          Top = 43
           Width = 53
           Height = 13
           Caption = 'Pesquisar: '
         end
         object lblTipoPesquisa: TLabel
-          Left = 9
-          Top = 19
+          Left = 10
+          Top = 22
           Width = 90
           Height = 13
           Caption = 'Tipo de Pesquisa : '
         end
         object edtPesquisa: TEdit
-          Left = 211
-          Top = 37
+          Left = 212
+          Top = 40
           Width = 252
           Height = 21
           CharCase = ecUpperCase
           TabOrder = 0
         end
         object Cmb_TipoPesquisa: TComboBox
-          Left = 9
-          Top = 37
+          Left = 10
+          Top = 40
           Width = 142
           Height = 21
           Style = csDropDownList
@@ -103,9 +94,9 @@ inherited FConsultaUnidade: TFConsultaUnidade
       end
     end
     inherited pnlRodape: TPanel
-      Top = 321
-      Width = 605
-      ExplicitTop = 321
+      Top = 398
+      Width = 624
+      ExplicitTop = 398
       ExplicitWidth = 605
     end
   end

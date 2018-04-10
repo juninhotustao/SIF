@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.PlatformDefaultStyleActnCtrls,
   System.Actions, Vcl.ActnList, Vcl.ActnMan, Vcl.RibbonLunaStyleActnCtrls,
-  Vcl.Ribbon, Vcl.ToolWin, Vcl.ActnCtrls, Vcl.RibbonObsidianStyleActnCtrls;
+  Vcl.Ribbon, Vcl.ToolWin, Vcl.ActnCtrls, Vcl.RibbonObsidianStyleActnCtrls,
+  Vcl.RibbonSilverStyleActnCtrls;
 
 type
   TFPrincipal = class(TForm)

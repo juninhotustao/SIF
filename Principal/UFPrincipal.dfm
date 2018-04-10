@@ -11608,60 +11608,11 @@ object FPrincipal: TFPrincipal
         Caption = 'Sistema'
         Page = rbsistema
       end>
+    TabIndex = 2
     DesignSize = (
       711
       143)
-    StyleName = 'Ribbon - Obsidian'
-    object rbMovimentacoes: TRibbonPage
-      Left = 0
-      Top = 50
-      Width = 710
-      Height = 93
-      Caption = 'Movimenta'#231#245'es'
-      Index = 1
-      object rbVendas: TRibbonGroup
-        Left = 4
-        Top = 3
-        Width = 71
-        Height = 86
-        ActionManager = ActionManager1
-        GroupIndex = 0
-      end
-      object rbControledeMesa: TRibbonGroup
-        Left = 77
-        Top = 3
-        Width = 59
-        Height = 86
-        ActionManager = ActionManager1
-        GroupIndex = 1
-      end
-    end
-    object rbsistema: TRibbonPage
-      Left = 0
-      Top = 50
-      Width = 710
-      Height = 93
-      Caption = 'Sistema'
-      Index = 2
-      object rgTrocarUsuario: TRibbonGroup
-        Left = 4
-        Top = 3
-        Width = 54
-        Height = 86
-        ActionManager = ActionManager1
-        Caption = 'Sistema'
-        GroupIndex = 0
-      end
-      object rgSair: TRibbonGroup
-        Left = 60
-        Top = 3
-        Width = 50
-        Height = 86
-        ActionManager = ActionManager1
-        Caption = 'Sistema'
-        GroupIndex = 1
-      end
-    end
+    StyleName = 'Ribbon - Silver'
     object pgCadastro: TRibbonPage
       AlignWithMargins = True
       Left = 0
@@ -11713,6 +11664,56 @@ object FPrincipal: TFPrincipal
         Height = 86
         ActionManager = ActionManager1
         GroupIndex = 3
+      end
+    end
+    object rbMovimentacoes: TRibbonPage
+      Left = 0
+      Top = 50
+      Width = 710
+      Height = 93
+      Caption = 'Movimenta'#231#245'es'
+      Index = 1
+      object rbVendas: TRibbonGroup
+        Left = 4
+        Top = 3
+        Width = 71
+        Height = 86
+        ActionManager = ActionManager1
+        GroupIndex = 0
+      end
+      object rbControledeMesa: TRibbonGroup
+        Left = 77
+        Top = 3
+        Width = 59
+        Height = 86
+        ActionManager = ActionManager1
+        GroupIndex = 1
+      end
+    end
+    object rbsistema: TRibbonPage
+      Left = 0
+      Top = 50
+      Width = 710
+      Height = 93
+      Caption = 'Sistema'
+      Index = 2
+      object rgTrocarUsuario: TRibbonGroup
+        Left = 4
+        Top = 3
+        Width = 54
+        Height = 86
+        ActionManager = ActionManager1
+        Caption = 'Sistema'
+        GroupIndex = 0
+      end
+      object rgSair: TRibbonGroup
+        Left = 60
+        Top = 3
+        Width = 50
+        Height = 86
+        ActionManager = ActionManager1
+        Caption = 'Sistema'
+        GroupIndex = 1
       end
     end
   end
@@ -11825,7 +11826,7 @@ object FPrincipal: TFPrincipal
     Images = DmImagens.Img
     Left = 464
     Top = 264
-    StyleName = 'Ribbon - Obsidian'
+    StyleName = 'Ribbon - Silver'
     object actSair: TAction
       Category = 'Sistema'
       Caption = 'Sair'

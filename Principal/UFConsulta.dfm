@@ -3,7 +3,7 @@ object FConsulta: TFConsulta
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  ClientHeight = 311
+  ClientHeight = 423
   ClientWidth = 539
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -24,15 +24,16 @@ object FConsulta: TFConsulta
     Left = 0
     Top = 0
     Width = 539
-    Height = 311
+    Height = 423
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitHeight = 311
     object Grid: TDBGrid
       Left = 0
       Top = 97
       Width = 539
-      Height = 159
+      Height = 271
       Align = alClient
       Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
       TabOrder = 0
@@ -53,12 +54,12 @@ object FConsulta: TFConsulta
       Height = 97
       Align = alTop
       BevelOuter = bvNone
-      Color = clActiveBorder
+      Color = clScrollBar
       ParentBackground = False
       TabOrder = 1
       object btnPesquisar: TButton
-        Left = 439
-        Top = 22
+        Left = 433
+        Top = 21
         Width = 100
         Height = 48
         Caption = '&Pesquisar'
@@ -68,7 +69,7 @@ object FConsulta: TFConsulta
         TabOrder = 0
       end
       object gpPesquisar2: TGroupBox
-        Left = 14
+        Left = 13
         Top = 6
         Width = 413
         Height = 73
@@ -78,13 +79,14 @@ object FConsulta: TFConsulta
     end
     object pnlRodape: TPanel
       Left = 0
-      Top = 256
+      Top = 368
       Width = 539
       Height = 55
       Align = alBottom
-      Color = clActiveBorder
+      Color = clScrollBar
       ParentBackground = False
       TabOrder = 2
+      ExplicitTop = 256
       DesignSize = (
         539
         55)

@@ -1,19 +1,21 @@
 inherited FConsultaFornecedor: TFConsultaFornecedor
   Caption = 'Consulta de Fornecedores'
-  ClientHeight = 367
+  ClientHeight = 445
   ClientWidth = 685
   OnCreate = FormCreate
   ExplicitWidth = 691
-  ExplicitHeight = 395
+  ExplicitHeight = 473
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlGrid: TPanel
     Width = 685
-    Height = 367
-    ExplicitWidth = 670
+    Height = 445
+    ExplicitWidth = 685
+    ExplicitHeight = 367
     inherited Grid: TDBGrid
+      Top = 126
       Width = 685
-      Height = 215
+      Height = 264
       DataSource = DS
       Columns = <
         item
@@ -45,38 +47,42 @@ inherited FConsultaFornecedor: TFConsultaFornecedor
     end
     inherited pnlConsulta: TPanel
       Width = 685
-      ExplicitWidth = 670
+      Height = 126
+      ExplicitWidth = 685
+      ExplicitHeight = 126
       inherited btnPesquisar: TButton
         Left = 578
-        Top = 21
+        Top = 36
         OnClick = btnPesquisarClick
         ExplicitLeft = 578
-        ExplicitTop = 21
+        ExplicitTop = 36
       end
       inherited gpPesquisar2: TGroupBox
         Left = 11
-        Top = 7
+        Top = 13
         Width = 558
+        Height = 84
         ExplicitLeft = 11
-        ExplicitTop = 7
+        ExplicitTop = 13
         ExplicitWidth = 558
+        ExplicitHeight = 84
         object lblTipoPesquisa: TLabel
           Left = 7
-          Top = 31
+          Top = 39
           Width = 90
           Height = 13
           Caption = 'Tipo de Pesquisa : '
         end
         object lbl_TextoPesquisa: TLabel
           Left = 237
-          Top = 31
+          Top = 39
           Width = 75
           Height = 13
           Caption = 'Pesquisar por : '
         end
         object Cmb_TipoPesquisa: TComboBox
           Left = 98
-          Top = 28
+          Top = 36
           Width = 134
           Height = 21
           Style = csDropDownList
@@ -90,7 +96,7 @@ inherited FConsultaFornecedor: TFConsultaFornecedor
         end
         object Edt_Conteudo: TEdit
           Left = 312
-          Top = 28
+          Top = 36
           Width = 235
           Height = 21
           TabOrder = 1
@@ -98,9 +104,10 @@ inherited FConsultaFornecedor: TFConsultaFornecedor
       end
     end
     inherited pnlRodape: TPanel
-      Top = 312
+      Top = 390
       Width = 685
-      ExplicitWidth = 670
+      ExplicitTop = 312
+      ExplicitWidth = 685
     end
   end
   inherited DS: TDataSource

@@ -9,6 +9,21 @@ uses
 
 type
   TFCadastroFornecedor = class(TFCadastro)
+    gpEndereco: TGroupBox;
+    Label100: TLabel;
+    Label102: TLabel;
+    Label103: TLabel;
+    Label106: TLabel;
+    Label107: TLabel;
+    Label108: TLabel;
+    Label104: TLabel;
+    edt_endereco: TDBEdit;
+    edt_complemento: TDBEdit;
+    edt_numero: TDBEdit;
+    comb_estado: TDBComboBox;
+    edt_cep: TDBEdit;
+    edt_cidade: TDBEdit;
+    edt_bairro: TDBEdit;
     gpDados: TGroupBox;
     lblCodigo: TLabel;
     lblIE: TLabel;
@@ -25,21 +40,6 @@ type
     rg_tipo: TDBRadioGroup;
     edt_telefone: TDBEdit;
     edt_telefone2: TDBEdit;
-    gpEndereco: TGroupBox;
-    Label100: TLabel;
-    Label102: TLabel;
-    Label103: TLabel;
-    Label106: TLabel;
-    Label107: TLabel;
-    Label108: TLabel;
-    edt_endereco: TDBEdit;
-    edt_complemento: TDBEdit;
-    edt_numero: TDBEdit;
-    comb_estado: TDBComboBox;
-    edt_cep: TDBEdit;
-    edt_cidade: TDBEdit;
-    edt_bairro: TDBEdit;
-    Label104: TLabel;
     procedure edt_telefoneExit(Sender: TObject);
     procedure edt_telefone2Exit(Sender: TObject);
     procedure rg_tipoClick(Sender: TObject);

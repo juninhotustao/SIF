@@ -9,9 +9,10 @@ uses
 
 type
   TFCadastroUnidade = class(TFCadastro)
+    gpGeral: TGroupBox;
     lblCodigo: TLabel;
-    dbCodigo: TDBEdit;
     lblDescricao: TLabel;
+    dbCodigo: TDBEdit;
     dbDescricao: TDBEdit;
     procedure btnConfirmaClick(Sender: TObject);
   private

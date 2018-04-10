@@ -10,7 +10,6 @@ uses
 
 type
   TFConsultaUnidade = class(TFConsulta)
-    groupPesquisa: TGroupBox;
     DTSUN_ID: TIntegerField;
     DTSUN_CODIGO: TStringField;
     DTSUN_DESCRICAO: TStringField;
