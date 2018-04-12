@@ -14,7 +14,9 @@ uses
   UFCadastroFornecedor in 'Cadastro\Fornecedor\UFCadastroFornecedor.pas' {FCadastroFornecedor},
   UFConsultaFornecedor in 'Cadastro\Fornecedor\UFConsultaFornecedor.pas' {FConsultaFornecedor},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  UFCadastroProdutos in 'Cadastro\Produtos\UFCadastroProdutos.pas' {FCadastroProdutos},
+  UFConsultaProdutos in 'Cadastro\Produtos\UFConsultaProdutos.pas' {FConsultaProdutos};
 
 {$R *.res}
 

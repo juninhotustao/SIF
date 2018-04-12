@@ -10,7 +10,7 @@ inherited FConsultaUnidade: TFConsultaUnidade
   inherited pnlGrid: TPanel
     Width = 624
     Height = 453
-    ExplicitWidth = 605
+    ExplicitWidth = 624
     ExplicitHeight = 453
     inherited Grid: TDBGrid
       Top = 137
@@ -24,6 +24,11 @@ inherited FConsultaUnidade: TFConsultaUnidade
           Expanded = False
           FieldName = 'UN_CODIGO'
           Title.Caption = 'C'#243'digo'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
           Width = 79
           Visible = True
         end
@@ -31,6 +36,11 @@ inherited FConsultaUnidade: TFConsultaUnidade
           Expanded = False
           FieldName = 'UN_DESCRICAO'
           Title.Caption = 'Descri'#231#227'o'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
           Width = 380
           Visible = True
         end>
@@ -38,7 +48,7 @@ inherited FConsultaUnidade: TFConsultaUnidade
     inherited pnlConsulta: TPanel
       Width = 624
       Height = 137
-      ExplicitWidth = 726
+      ExplicitWidth = 624
       ExplicitHeight = 137
       inherited btnPesquisar: TButton
         Left = 511
@@ -97,7 +107,7 @@ inherited FConsultaUnidade: TFConsultaUnidade
       Top = 398
       Width = 624
       ExplicitTop = 398
-      ExplicitWidth = 605
+      ExplicitWidth = 624
     end
   end
   inherited DTS: TSQLDataSet

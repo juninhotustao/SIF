@@ -72,6 +72,8 @@ object FCadastro: TFCadastro
     Width = 405
     Height = 273
     Align = alClient
+    Color = cl3DLight
+    ParentBackground = False
     TabOrder = 0
   end
   object DS: TDataSource

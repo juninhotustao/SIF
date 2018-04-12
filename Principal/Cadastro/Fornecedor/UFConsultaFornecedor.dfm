@@ -11,7 +11,7 @@ inherited FConsultaFornecedor: TFConsultaFornecedor
     Width = 685
     Height = 445
     ExplicitWidth = 685
-    ExplicitHeight = 367
+    ExplicitHeight = 445
     inherited Grid: TDBGrid
       Top = 126
       Width = 685
@@ -22,12 +22,22 @@ inherited FConsultaFornecedor: TFConsultaFornecedor
           Expanded = False
           FieldName = 'FOR_ID'
           Title.Caption = 'C'#243'digo'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'FOR_NOME'
           Title.Caption = 'Nome'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
           Width = 311
           Visible = True
         end
@@ -35,12 +45,22 @@ inherited FConsultaFornecedor: TFConsultaFornecedor
           Expanded = False
           FieldName = 'FOR_TELEFONE'
           Title.Caption = 'Telefone'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'FOR_CIDADE'
           Title.Caption = 'Cidade'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
           Width = 151
           Visible = True
         end>
@@ -106,7 +126,7 @@ inherited FConsultaFornecedor: TFConsultaFornecedor
     inherited pnlRodape: TPanel
       Top = 390
       Width = 685
-      ExplicitTop = 312
+      ExplicitTop = 390
       ExplicitWidth = 685
     end
   end
@@ -115,7 +135,11 @@ inherited FConsultaFornecedor: TFConsultaFornecedor
     Top = 264
   end
   inherited DTS: TSQLDataSet
-    CommandText = 'SELECT * FROM FORNECEDORES'
+    CommandText = 
+      'SELECT '#9'  '#13#10#9'FOR_ID, FOR_TIPO_PES, FOR_CPF, FOR_CNPJ, FOR_INSCRI' +
+      'CAO, FOR_NOME,'#13#10#9'FOR_TELEFONE, FOR_TELEFONE2, FOR_ENDERECO, FOR_' +
+      'END_NUMERO, FOR_BAIRRO,'#13#10#9'FOR_END_COMPLEMENTO, FOR_ESTADO, FOR_C' +
+      'IDADE, FOR_CEP '#13#10'FROM '#13#10#9'FORNECEDORES'
     Left = 624
     Top = 108
     object DTSFOR_ID: TIntegerField

@@ -95,7 +95,8 @@ procedure TFConsultaFornecedor.FormCreate(Sender: TObject);
 begin
   inherited;
 
-  FrmClass := TFCadastroFornecedor;
+  TabelaNome := 'FORNECEDORES';
+  FrmClass   := TFCadastroFornecedor;
 end;
 
 end.

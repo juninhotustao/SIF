@@ -55,7 +55,7 @@ var
 implementation
 
 uses
-  UDmImagens, UFunc, UFConsultaUnidade, UFConsultaFornecedor;
+  UDmImagens, UFunc, UFConsultaUnidade, UFConsultaFornecedor, UFConsultaProdutos;
 
 {$R *.dfm}
 
@@ -76,7 +76,7 @@ end;
 
 procedure TFPrincipal.ActProdutosExecute(Sender: TObject);
 begin
-  //
+  TFunc.CriaForm(TFConsultaProdutos);
 end;
 
 procedure TFPrincipal.actRelatoriosExecute(Sender: TObject);
