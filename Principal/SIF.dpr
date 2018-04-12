@@ -16,7 +16,9 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   UFCadastroProdutos in 'Cadastro\Produtos\UFCadastroProdutos.pas' {FCadastroProdutos},
-  UFConsultaProdutos in 'Cadastro\Produtos\UFConsultaProdutos.pas' {FConsultaProdutos};
+  UFConsultaProdutos in 'Cadastro\Produtos\UFConsultaProdutos.pas' {FConsultaProdutos},
+  UUnidade in 'Cadastro\Unidade\UUnidade.pas',
+  UEntity in 'UEntity.pas';
 
 {$R *.res}
 

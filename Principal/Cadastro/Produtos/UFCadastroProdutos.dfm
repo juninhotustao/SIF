@@ -15,15 +15,15 @@ inherited FCadastroProdutos: TFCadastroProdutos
     ExplicitWidth = 707
     ExplicitHeight = 38
     inherited btnConfirma: TButton
-      Left = 244
+      Left = 243
       Top = 2
-      ExplicitLeft = 244
+      ExplicitLeft = 243
       ExplicitTop = 2
     end
     inherited btnCancela: TButton
-      Left = 362
+      Left = 363
       Top = 2
-      ExplicitLeft = 362
+      ExplicitLeft = 363
       ExplicitTop = 2
     end
   end
