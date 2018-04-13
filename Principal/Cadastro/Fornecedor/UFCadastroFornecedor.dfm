@@ -9,8 +9,8 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
   inherited pnlRodape: TPanel
     Top = 332
     Width = 629
-    ExplicitTop = 297
-    ExplicitWidth = 530
+    ExplicitTop = 332
+    ExplicitWidth = 629
     inherited btnConfirma: TButton
       Left = 205
       ExplicitLeft = 205
@@ -23,8 +23,8 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
   inherited pnlPrincipal: TPanel
     Width = 629
     Height = 332
-    ExplicitWidth = 530
-    ExplicitHeight = 297
+    ExplicitWidth = 629
+    ExplicitHeight = 332
     object gpEndereco: TGroupBox
       Left = 1
       Top = 157
@@ -33,8 +33,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
       Align = alTop
       Caption = 'Endere'#231'o'
       TabOrder = 1
-      ExplicitTop = 141
-      ExplicitWidth = 626
       object Label100: TLabel
         Left = 482
         Top = 23
@@ -99,7 +97,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_ENDERECO'
         DataSource = DS
         Font.Charset = ANSI_CHARSET
@@ -119,7 +116,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_END_COMPLEMENTO'
         DataSource = DS
         Font.Charset = ANSI_CHARSET
@@ -139,7 +135,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_END_NUMERO'
         DataSource = DS
         Font.Charset = ANSI_CHARSET
@@ -206,7 +201,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_CEP'
         DataSource = DS
         Font.Charset = ANSI_CHARSET
@@ -226,7 +220,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_CIDADE'
         DataSource = DS
         Font.Charset = ANSI_CHARSET
@@ -246,7 +239,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_BAIRRO'
         DataSource = DS
         Font.Charset = ANSI_CHARSET
@@ -268,7 +260,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
       Color = cl3DLight
       ParentColor = False
       TabOrder = 0
-      ExplicitWidth = 626
       object lblCodigo: TLabel
         Left = 35
         Top = 22
@@ -336,7 +327,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_ID'
         DataSource = DS
         Enabled = False
@@ -359,7 +349,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_INSCRICAO'
         DataSource = DS
         Enabled = False
@@ -381,7 +370,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_CPF'
         DataSource = DS
         Font.Charset = ANSI_CHARSET
@@ -401,7 +389,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_CNPJ'
         DataSource = DS
         Enabled = False
@@ -422,7 +409,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_NOME'
         DataSource = DS
         Font.Charset = ANSI_CHARSET
@@ -460,7 +446,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_TELEFONE'
         DataSource = DS
         Font.Charset = ANSI_CHARSET
@@ -481,7 +466,6 @@ inherited FCadastroFornecedor: TFCadastroFornecedor
         BevelKind = bkFlat
         BorderStyle = bsNone
         CharCase = ecUpperCase
-        Color = 16056319
         DataField = 'FOR_TELEFONE2'
         DataSource = DS
         Font.Charset = ANSI_CHARSET

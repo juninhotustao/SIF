@@ -28,7 +28,7 @@ type
     lblVenda: TLabel;
     lblMedio: TLabel;
     lblUnidade: TLabel;
-    lblDepartamento: TLabel;
+    lblGrupo: TLabel;
     edtCusto: TDBEdit;
     edtCustoReal: TDBEdit;
     edtVenda: TDBEdit;
@@ -37,8 +37,10 @@ type
     edtUnDescricao: TDBEdit;
     edtDepId: TDBEdit;
     edtDepDescricao: TDBEdit;
+    GroupBox1: TGroupBox;
     procedure edtReferenciaExit(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure edtUnExit(Sender: TObject);
   private
     //
   public
@@ -74,6 +76,15 @@ begin
   end;
 end;
 
+procedure TFCadastroProdutos.edtUnExit(Sender: TObject);
+begin
+  if (edtUn.Field.IsNull) or (trim(edtUn.Text) = '') then
+    edtUn.Field.Value := edtUn.Field.OldValue;
+
+  if edtUn.Field.Value <> edtUn.Field.OldValue then
+    SetUnidade;
+end;
+
 procedure TFCadastroProdutos.FormShow(Sender: TObject);
 begin
   SetUnidade;
@@ -87,9 +98,12 @@ begin
     Exit;
 
   FUnidade := TUnidadeService.Create;
+
   try
     if FUnidade.Buscar(Ds.DataSet.FieldByName('PRO_UN_ID').AsString) then
-      Ds.DataSet.FieldByName('DescricaoUnidade').AsString := FUnidade.Dados.UN_DESCRICAO;
+      Ds.DataSet.FieldByName('DescricaoUnidade').AsString := FUnidade.Dados.UN_DESCRICAO
+    else
+      Ds.DataSet.FieldByName('DescricaoUnidade').AsString := '';
   finally
     FUnidade.Free;
   end;

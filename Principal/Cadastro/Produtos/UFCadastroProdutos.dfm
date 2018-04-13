@@ -1,17 +1,17 @@
 inherited FCadastroProdutos: TFCadastroProdutos
   Caption = 'Cadastro de Produto'
-  ClientHeight = 352
+  ClientHeight = 366
   ClientWidth = 707
   OnShow = FormShow
   ExplicitWidth = 713
-  ExplicitHeight = 380
+  ExplicitHeight = 394
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlRodape: TPanel
-    Top = 314
+    Top = 328
     Width = 707
     Height = 38
-    ExplicitTop = 315
+    ExplicitTop = 314
     ExplicitWidth = 707
     ExplicitHeight = 38
     inherited btnConfirma: TButton
@@ -29,7 +29,9 @@ inherited FCadastroProdutos: TFCadastroProdutos
   end
   inherited pnlPrincipal: TPanel
     Width = 707
-    Height = 314
+    Height = 328
+    ExplicitWidth = 707
+    ExplicitHeight = 314
     object gpCabecalho: TGroupBox
       Left = 1
       Top = 1
@@ -163,17 +165,26 @@ inherited FCadastroProdutos: TFCadastroProdutos
         TabOrder = 0
         DisplayFormat = 'dd/mm/yyyy'
       end
+      object GroupBox1: TGroupBox
+        Left = 551
+        Top = 3
+        Width = 146
+        Height = 132
+        Caption = 'Imagem'
+        TabOrder = 5
+      end
     end
     object pg_: TPageControl
       Left = 1
       Top = 142
       Width = 705
-      Height = 171
+      Height = 185
       ActivePage = tabPrecos
       Align = alTop
       TabOrder = 1
       object tabPrecos: TTabSheet
         Caption = 'Dados do Produto'
+        ExplicitHeight = 143
         object lblCusto: TLabel
           Left = 22
           Top = 22
@@ -209,12 +220,12 @@ inherited FCadastroProdutos: TFCadastroProdutos
           Height = 13
           Caption = 'Unidade'
         end
-        object lblDepartamento: TLabel
+        object lblGrupo: TLabel
           Left = 22
-          Top = 89
-          Width = 82
+          Top = 93
+          Width = 35
           Height = 13
-          Caption = 'Departamento'
+          Caption = 'Grupo'
         end
         object edtCusto: TDBEdit
           Left = 22
@@ -280,6 +291,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
           DataField = 'PRO_UN_ID'
           DataSource = DS
           TabOrder = 4
+          OnExit = edtUnExit
         end
         object edtUnDescricao: TDBEdit
           Left = 573
@@ -298,7 +310,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
         end
         object edtDepId: TDBEdit
           Left = 22
-          Top = 108
+          Top = 112
           Width = 36
           Height = 19
           BevelInner = bvNone
@@ -310,7 +322,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
         end
         object edtDepDescricao: TDBEdit
           Left = 62
-          Top = 108
+          Top = 112
           Width = 226
           Height = 19
           BevelInner = bvNone
@@ -326,7 +338,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
   end
   inherited DS: TDataSource
     DataSet = FConsultaProdutos.CDS
-    Left = 544
-    Top = 24
+    Left = 464
+    Top = 12
   end
 end
