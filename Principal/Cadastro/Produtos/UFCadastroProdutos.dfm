@@ -11,7 +11,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
     Top = 328
     Width = 707
     Height = 38
-    ExplicitTop = 314
+    ExplicitTop = 328
     ExplicitWidth = 707
     ExplicitHeight = 38
     inherited btnConfirma: TButton
@@ -31,7 +31,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
     Width = 707
     Height = 328
     ExplicitWidth = 707
-    ExplicitHeight = 314
+    ExplicitHeight = 328
     object gpCabecalho: TGroupBox
       Left = 1
       Top = 1
@@ -184,51 +184,57 @@ inherited FCadastroProdutos: TFCadastroProdutos
       TabOrder = 1
       object tabPrecos: TTabSheet
         Caption = 'Dados do Produto'
-        ExplicitHeight = 143
         object lblCusto: TLabel
-          Left = 22
+          Left = 44
           Top = 22
           Width = 69
           Height = 13
           Caption = 'Pre'#231'o Custo'
         end
         object lblCustoReal: TLabel
-          Left = 153
+          Left = 175
           Top = 22
           Width = 98
           Height = 13
           Caption = 'Pre'#231'o Custo Real'
         end
         object lblVenda: TLabel
-          Left = 288
+          Left = 310
           Top = 22
           Width = 72
           Height = 13
           Caption = 'Pre'#231'o Venda'
         end
         object lblMedio: TLabel
-          Left = 409
+          Left = 431
           Top = 22
           Width = 69
           Height = 13
           Caption = 'Pre'#231'o M'#233'dio'
         end
         object lblUnidade: TLabel
-          Left = 533
-          Top = 22
+          Left = 44
+          Top = 94
           Width = 46
           Height = 13
           Caption = 'Unidade'
         end
         object lblGrupo: TLabel
-          Left = 22
-          Top = 93
+          Left = 223
+          Top = 94
           Width = 35
           Height = 13
           Caption = 'Grupo'
         end
+        object lblGaveta: TLabel
+          Left = 545
+          Top = 22
+          Width = 41
+          Height = 13
+          Caption = 'Gaveta'
+        end
         object edtCusto: TDBEdit
-          Left = 22
+          Left = 44
           Top = 39
           Width = 82
           Height = 19
@@ -241,7 +247,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
           TabOrder = 0
         end
         object edtCustoReal: TDBEdit
-          Left = 153
+          Left = 175
           Top = 39
           Width = 82
           Height = 19
@@ -254,7 +260,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
           TabOrder = 1
         end
         object edtVenda: TDBEdit
-          Left = 288
+          Left = 310
           Top = 39
           Width = 82
           Height = 19
@@ -267,7 +273,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
           TabOrder = 2
         end
         object edtMedio: TDBEdit
-          Left = 409
+          Left = 431
           Top = 39
           Width = 82
           Height = 19
@@ -280,8 +286,8 @@ inherited FCadastroProdutos: TFCadastroProdutos
           TabOrder = 3
         end
         object edtUn: TDBEdit
-          Left = 533
-          Top = 39
+          Left = 44
+          Top = 111
           Width = 36
           Height = 19
           BevelInner = bvNone
@@ -294,8 +300,8 @@ inherited FCadastroProdutos: TFCadastroProdutos
           OnExit = edtUnExit
         end
         object edtUnDescricao: TDBEdit
-          Left = 573
-          Top = 39
+          Left = 84
+          Top = 111
           Width = 115
           Height = 19
           BevelInner = bvNone
@@ -309,8 +315,8 @@ inherited FCadastroProdutos: TFCadastroProdutos
           TabOrder = 5
         end
         object edtDepId: TDBEdit
-          Left = 22
-          Top = 112
+          Left = 223
+          Top = 111
           Width = 36
           Height = 19
           BevelInner = bvNone
@@ -321,8 +327,8 @@ inherited FCadastroProdutos: TFCadastroProdutos
           TabOrder = 6
         end
         object edtDepDescricao: TDBEdit
-          Left = 62
-          Top = 112
+          Left = 264
+          Top = 111
           Width = 226
           Height = 19
           BevelInner = bvNone
@@ -332,6 +338,19 @@ inherited FCadastroProdutos: TFCadastroProdutos
           Color = cl3DLight
           DataSource = DS
           TabOrder = 7
+        end
+        object edtGaveta: TDBEdit
+          Left = 545
+          Top = 39
+          Width = 106
+          Height = 19
+          BevelInner = bvNone
+          BevelOuter = bvRaised
+          BevelKind = bkFlat
+          BorderStyle = bsNone
+          DataField = 'PRO_GAVETA'
+          DataSource = DS
+          TabOrder = 8
         end
       end
     end

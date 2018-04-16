@@ -37,6 +37,8 @@ type
     CDSPRO_PRECO_VENDA: TFMTBCDField;
     CDSPRO_UN_ID: TIntegerField;
     CDSDescricaoUnidade: TStringField;
+    DTSPRO_GAVETA: TStringField;
+    CDSPRO_GAVETA: TStringField;
     procedure btnPesquisarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

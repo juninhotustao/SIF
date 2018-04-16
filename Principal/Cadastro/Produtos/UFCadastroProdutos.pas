@@ -38,6 +38,8 @@ type
     edtDepId: TDBEdit;
     edtDepDescricao: TDBEdit;
     GroupBox1: TGroupBox;
+    lblGaveta: TLabel;
+    edtGaveta: TDBEdit;
     procedure edtReferenciaExit(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure edtUnExit(Sender: TObject);

@@ -10,6 +10,8 @@ inherited FConsultaProdutos: TFConsultaProdutos
   inherited pnlGrid: TPanel
     Width = 728
     Height = 457
+    ExplicitWidth = 728
+    ExplicitHeight = 457
     inherited Grid: TDBGrid
       Top = 151
       Width = 728
@@ -135,14 +137,16 @@ inherited FConsultaProdutos: TFConsultaProdutos
     inherited pnlRodape: TPanel
       Top = 402
       Width = 728
+      ExplicitTop = 402
+      ExplicitWidth = 728
     end
   end
   inherited DTS: TSQLDataSet
     CommandText = 
       'SELECT '#13#10#9'PRO_ID, PRO_DATA_CADASTRO, PRO_REFERENCIA, PRO_EAN, '#13#10 +
       #9'PRO_DESCRICAO, PRO_ESTOQUE, PRO_PRECO_CUSTO, '#13#10#9'PRO_PRECO_CUSTO' +
-      '_REAL, PRO_PRECO_MEDIO_COMPRA, '#13#10#9'PRO_PRECO_VENDA, PRO_UN_ID  '#13#10 +
-      'FROM '#13#10#9'PRODUTOS'
+      '_REAL, PRO_PRECO_MEDIO_COMPRA, '#13#10#9'PRO_PRECO_VENDA, PRO_UN_ID, PR' +
+      'O_GAVETA'#13#10'FROM '#13#10#9'PRODUTOS'
     object DTSPRO_ID: TIntegerField
       FieldName = 'PRO_ID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -198,6 +202,10 @@ inherited FConsultaProdutos: TFConsultaProdutos
     object DTSPRO_UN_ID: TIntegerField
       FieldName = 'PRO_UN_ID'
       ProviderFlags = [pfInUpdate]
+    end
+    object DTSPRO_GAVETA: TStringField
+      FieldName = 'PRO_GAVETA'
+      Size = 30
     end
   end
   inherited CDS: TClientDataSet
@@ -267,6 +275,10 @@ inherited FConsultaProdutos: TFConsultaProdutos
       FieldName = 'DescricaoUnidade'
       ProviderFlags = []
       Size = 50
+    end
+    object CDSPRO_GAVETA: TStringField
+      FieldName = 'PRO_GAVETA'
+      Size = 30
     end
   end
 end
