@@ -35,8 +35,8 @@ type
     edtMedio: TDBEdit;
     edtUn: TDBEdit;
     edtUnDescricao: TDBEdit;
-    edtDepId: TDBEdit;
-    edtDepDescricao: TDBEdit;
+    edGrupoId: TDBEdit;
+    edtGrupoDescricao: TDBEdit;
     GroupBox1: TGroupBox;
     lblGaveta: TLabel;
     edtGaveta: TDBEdit;
@@ -105,7 +105,10 @@ begin
     if FUnidade.Buscar(Ds.DataSet.FieldByName('PRO_UN_ID').AsString) then
       Ds.DataSet.FieldByName('DescricaoUnidade').AsString := FUnidade.Dados.UN_DESCRICAO
     else
+    begin
       Ds.DataSet.FieldByName('DescricaoUnidade').AsString := '';
+      Ds.DataSet.FieldByName('PRO_UN_ID').Clear;
+    end;
   finally
     FUnidade.Free;
   end;

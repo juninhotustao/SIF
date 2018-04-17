@@ -81,8 +81,8 @@ procedure TFConsultaUnidade.FormCreate(Sender: TObject);
 begin
   inherited;
 
-  TabelaNome := 'UNIDADE';
   FrmClass   := TFCadastroUnidade;
+  TabelaNome := 'UNIDADE';
 end;
 
 end.

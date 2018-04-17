@@ -18,7 +18,9 @@ uses
   UFCadastroProdutos in 'Cadastro\Produtos\UFCadastroProdutos.pas' {FCadastroProdutos},
   UFConsultaProdutos in 'Cadastro\Produtos\UFConsultaProdutos.pas' {FConsultaProdutos},
   UUnidade in 'Cadastro\Unidade\UUnidade.pas',
-  UEntity in 'UEntity.pas';
+  UEntity in 'UEntity.pas',
+  UFCadastroGrupos in 'Cadastro\Grupos\UFCadastroGrupos.pas' {FCadastroGrupos},
+  UFConsultaGrupos in 'Cadastro\Grupos\UFConsultaGrupos.pas' {FConsultaGrupos};
 
 {$R *.res}
 

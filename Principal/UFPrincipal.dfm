@@ -11605,14 +11605,58 @@ object FPrincipal: TFPrincipal
         Page = rbMovimentacoes
       end
       item
+        Caption = 'Relat'#243'rios'
+        Page = rbRelatorios
+      end
+      item
         Caption = 'Sistema'
-        Page = rbsistema
+        Page = rbSistema
       end>
-    TabIndex = 2
+    TabIndex = 3
     DesignSize = (
       711
       143)
     StyleName = 'Ribbon - Silver'
+    object rbMovimentacoes: TRibbonPage
+      Left = 0
+      Top = 50
+      Width = 710
+      Height = 93
+      Caption = 'Movimenta'#231#245'es'
+      Index = 1
+      object rbVendas: TRibbonGroup
+        Left = 4
+        Top = 3
+        Width = 71
+        Height = 86
+        ActionManager = ActionManager1
+        GroupIndex = 0
+      end
+      object rbControledeMesa: TRibbonGroup
+        Left = 77
+        Top = 3
+        Width = 59
+        Height = 86
+        ActionManager = ActionManager1
+        GroupIndex = 1
+      end
+    end
+    object rbRelatorios: TRibbonPage
+      Left = 0
+      Top = 50
+      Width = 710
+      Height = 93
+      Caption = 'Relat'#243'rios'
+      Index = 2
+      object rgRelatorios: TRibbonGroup
+        Left = 4
+        Top = 3
+        Width = 66
+        Height = 86
+        ActionManager = ActionManager1
+        GroupIndex = 0
+      end
+    end
     object pgCadastro: TRibbonPage
       AlignWithMargins = True
       Left = 0
@@ -11639,15 +11683,6 @@ object FPrincipal: TFPrincipal
         GroupAlign = gaHorizontal
         GroupIndex = 2
       end
-      object gprRelatorio: TRibbonGroup
-        Left = 270
-        Top = 3
-        Width = 56
-        Height = 86
-        ActionManager = ActionManager1
-        GroupAlign = gaHorizontal
-        GroupIndex = 4
-      end
       object gprClientes: TRibbonGroup
         Left = 4
         Top = 3
@@ -11665,55 +11700,37 @@ object FPrincipal: TFPrincipal
         ActionManager = ActionManager1
         GroupIndex = 3
       end
-    end
-    object rbMovimentacoes: TRibbonPage
-      Left = 0
-      Top = 50
-      Width = 710
-      Height = 93
-      Caption = 'Movimenta'#231#245'es'
-      Index = 1
-      object rbVendas: TRibbonGroup
-        Left = 4
+      object grpGrupos: TRibbonGroup
+        Left = 270
         Top = 3
-        Width = 71
+        Width = 52
         Height = 86
         ActionManager = ActionManager1
-        GroupIndex = 0
-      end
-      object rbControledeMesa: TRibbonGroup
-        Left = 77
-        Top = 3
-        Width = 59
-        Height = 86
-        ActionManager = ActionManager1
-        GroupIndex = 1
+        GroupIndex = 5
       end
     end
-    object rbsistema: TRibbonPage
+    object rbSistema: TRibbonPage
       Left = 0
       Top = 50
       Width = 710
       Height = 93
       Caption = 'Sistema'
-      Index = 2
-      object rgTrocarUsuario: TRibbonGroup
-        Left = 4
-        Top = 3
-        Width = 54
-        Height = 86
-        ActionManager = ActionManager1
-        Caption = 'Sistema'
-        GroupIndex = 0
-      end
+      Index = 3
       object rgSair: TRibbonGroup
         Left = 60
         Top = 3
         Width = 50
         Height = 86
         ActionManager = ActionManager1
-        Caption = 'Sistema'
         GroupIndex = 1
+      end
+      object rgTrocarUsuario: TRibbonGroup
+        Left = 4
+        Top = 3
+        Width = 54
+        Height = 86
+        ActionManager = ActionManager1
+        GroupIndex = 0
       end
     end
   end
@@ -11760,7 +11777,6 @@ object FPrincipal: TFPrincipal
             ImageIndex = 80
             CommandProperties.ButtonSize = bsLarge
           end>
-        ActionBar = gprRelatorio
       end
       item
         Items = <
@@ -11801,6 +11817,54 @@ object FPrincipal: TFPrincipal
             ImageIndex = 97
             CommandProperties.ButtonSize = bsLarge
           end>
+      end
+      item
+        Items = <
+          item
+            Action = actSair
+            Caption = '&Sair'
+            ImageIndex = 29
+            CommandProperties.ButtonSize = bsLarge
+          end>
+      end
+      item
+        Items = <
+          item
+            Action = actUnidade
+            Caption = '&Unidade'
+            ImageIndex = 104
+            CommandProperties.ButtonSize = bsLarge
+          end>
+        ActionBar = grpUnidade
+      end
+      item
+        Items = <
+          item
+            Action = actGrupos
+            Caption = '&Grupos'
+            ImageIndex = 94
+            CommandProperties.ButtonSize = bsLarge
+          end>
+        ActionBar = grpGrupos
+      end
+      item
+        Items = <
+          item
+            Action = actRelatorios
+            Caption = '&Relat'#243'rios'
+            ImageIndex = 80
+            CommandProperties.ButtonSize = bsLarge
+          end>
+        ActionBar = rgRelatorios
+      end
+      item
+        Items = <
+          item
+            Action = actTrocarUsuario
+            Caption = '&Alterar Usuario'
+            ImageIndex = 97
+            CommandProperties.ButtonSize = bsLarge
+          end>
         ActionBar = rgTrocarUsuario
       end
       item
@@ -11812,16 +11876,6 @@ object FPrincipal: TFPrincipal
             CommandProperties.ButtonSize = bsLarge
           end>
         ActionBar = rgSair
-      end
-      item
-        Items = <
-          item
-            Action = actUnidade
-            Caption = '&Unidade'
-            ImageIndex = 104
-            CommandProperties.ButtonSize = bsLarge
-          end>
-        ActionBar = grpUnidade
       end>
     Images = DmImagens.Img
     Left = 464
@@ -11852,7 +11906,7 @@ object FPrincipal: TFPrincipal
       OnExecute = ActProdutosExecute
     end
     object actRelatorios: TAction
-      Category = 'Cadastro'
+      Category = 'Relat'#243'rios'
       Caption = 'Relat'#243'rios'
       ImageIndex = 80
       OnExecute = actRelatoriosExecute
@@ -11880,6 +11934,12 @@ object FPrincipal: TFPrincipal
       Caption = 'Unidade'
       ImageIndex = 104
       OnExecute = actUnidadeExecute
+    end
+    object actGrupos: TAction
+      Category = 'Cadastro'
+      Caption = 'Grupos'
+      ImageIndex = 94
+      OnExecute = actGruposExecute
     end
   end
 end

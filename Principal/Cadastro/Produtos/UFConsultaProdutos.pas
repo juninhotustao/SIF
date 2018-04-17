@@ -65,7 +65,7 @@ const
     '	  PRO_ID,	PRO_DATA_CADASTRO, PRO_REFERENCIA, '+
     '	  PRO_EAN, PRO_DESCRICAO, PRO_ESTOQUE, PRO_PRECO_CUSTO, '+
     '	  PRO_PRECO_CUSTO_REAL, PRO_PRECO_MEDIO_COMPRA, '+
-    '	  PRO_PRECO_VENDA, PRO_UN_ID '+
+    '	  PRO_PRECO_VENDA, PRO_UN_ID, PRO_GAVETA '+
     ' FROM '+
     '	  PRODUTOS '+
     ' WHERE '+
@@ -101,8 +101,8 @@ procedure TFConsultaProdutos.FormCreate(Sender: TObject);
 begin
   inherited;
 
-  TabelaNome := 'PRODUTOS';
   FrmClass   := TFCadastroProdutos;
+  TabelaNome := 'PRODUTOS';
 end;
 
 end.

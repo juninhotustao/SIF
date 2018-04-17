@@ -4,7 +4,7 @@ inherited FConsultaUnidade: TFConsultaUnidade
   ClientWidth = 624
   OnCreate = FormCreate
   ExplicitWidth = 630
-  ExplicitHeight = 481
+  ExplicitHeight = 482
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlGrid: TPanel

@@ -4,7 +4,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
   ClientWidth = 707
   OnShow = FormShow
   ExplicitWidth = 713
-  ExplicitHeight = 394
+  ExplicitHeight = 395
   PixelsPerInch = 96
   TextHeight = 13
   inherited pnlRodape: TPanel
@@ -201,7 +201,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
         object lblVenda: TLabel
           Left = 310
           Top = 22
-          Width = 72
+          Width = 71
           Height = 13
           Caption = 'Pre'#231'o Venda'
         end
@@ -296,7 +296,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
           BorderStyle = bsNone
           DataField = 'PRO_UN_ID'
           DataSource = DS
-          TabOrder = 4
+          TabOrder = 5
           OnExit = edtUnExit
         end
         object edtUnDescricao: TDBEdit
@@ -312,9 +312,9 @@ inherited FCadastroProdutos: TFCadastroProdutos
           DataField = 'DescricaoUnidade'
           DataSource = DS
           Enabled = False
-          TabOrder = 5
+          TabOrder = 6
         end
-        object edtDepId: TDBEdit
+        object edGrupoId: TDBEdit
           Left = 223
           Top = 111
           Width = 36
@@ -324,9 +324,9 @@ inherited FCadastroProdutos: TFCadastroProdutos
           BevelKind = bkFlat
           BorderStyle = bsNone
           DataSource = DS
-          TabOrder = 6
+          TabOrder = 7
         end
-        object edtDepDescricao: TDBEdit
+        object edtGrupoDescricao: TDBEdit
           Left = 264
           Top = 111
           Width = 226
@@ -337,7 +337,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
           BorderStyle = bsNone
           Color = cl3DLight
           DataSource = DS
-          TabOrder = 7
+          TabOrder = 8
         end
         object edtGaveta: TDBEdit
           Left = 545
@@ -350,7 +350,7 @@ inherited FCadastroProdutos: TFCadastroProdutos
           BorderStyle = bsNone
           DataField = 'PRO_GAVETA'
           DataSource = DS
-          TabOrder = 8
+          TabOrder = 4
         end
       end
     end

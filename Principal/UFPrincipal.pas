@@ -15,7 +15,6 @@ type
     pgCadastro: TRibbonPage;
     gprFornecedores: TRibbonGroup;
     gprProdutos: TRibbonGroup;
-    gprRelatorio: TRibbonGroup;
     gprClientes: TRibbonGroup;
     ActionManager1: TActionManager;
     actSair: TAction;
@@ -28,21 +27,26 @@ type
     actRelatorios: TAction;
     actVendas: TAction;
     actControledeMesa: TAction;
-    rbsistema: TRibbonPage;
-    rgTrocarUsuario: TRibbonGroup;
-    rgSair: TRibbonGroup;
     actTrocarUsuario: TAction;
     grpUnidade: TRibbonGroup;
     actUnidade: TAction;
+    actGrupos: TAction;
+    grpGrupos: TRibbonGroup;
+    rbRelatorios: TRibbonPage;
+    rgRelatorios: TRibbonGroup;
+    rbSistema: TRibbonPage;
+    rgSair: TRibbonGroup;
+    rgTrocarUsuario: TRibbonGroup;
     procedure actClientesExecute(Sender: TObject);
     procedure actSairExecute(Sender: TObject);
     procedure actFornecedoresExecute(Sender: TObject);
     procedure ActProdutosExecute(Sender: TObject);
-    procedure actRelatoriosExecute(Sender: TObject);
     procedure actVendasExecute(Sender: TObject);
     procedure actControledeMesaExecute(Sender: TObject);
     procedure actUnidadeExecute(Sender: TObject);
     procedure actTrocarUsuarioExecute(Sender: TObject);
+    procedure actGruposExecute(Sender: TObject);
+    procedure actRelatoriosExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -55,7 +59,8 @@ var
 implementation
 
 uses
-  UDmImagens, UFunc, UFConsultaUnidade, UFConsultaFornecedor, UFConsultaProdutos;
+  UDmImagens, UFunc, UFConsultaUnidade, UFConsultaFornecedor, UFConsultaProdutos,
+  UFConsultaGrupos;
 
 {$R *.dfm}
 
@@ -72,6 +77,11 @@ end;
 procedure TFPrincipal.actFornecedoresExecute(Sender: TObject);
 begin
   TFunc.CriaForm(TFConsultaFornecedor);
+end;
+
+procedure TFPrincipal.actGruposExecute(Sender: TObject);
+begin
+  TFunc.CriaForm(TFConsultaGrupos);
 end;
 
 procedure TFPrincipal.ActProdutosExecute(Sender: TObject);
